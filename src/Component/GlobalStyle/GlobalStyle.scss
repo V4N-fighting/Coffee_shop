@@ -1,0 +1,60 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Caveat:wght@700&family=Comfortaa:wght@700&family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --light-primary-text: #000000e0;
+    --light-secondary-text: #000000a6;
+    --light-disable-text: #00000040;
+    --light-border-color: #d9d9d9ff;
+    --light-background-color: #f5f5f5ff;
+
+    --dark-primary-text: #ffffffd9;
+    --dark-secondary-text: #ffffffa6;
+    --dark-disable-text: #ffffff40;
+    --dark-border-color: #424242ff;
+    --dark-background-color: #000000ff;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: var(--light-background-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Caramel', cursive;
+    font-family: 'Caveat', cursive;
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+    line-height: 1.875;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w1024 {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.w-1-2 {
+    width: 50%;
+    padding: 0 5px;
+}
