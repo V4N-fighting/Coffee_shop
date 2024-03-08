@@ -1,7 +1,6 @@
-import classNames from 'classnames';
 import { useRef, useState } from 'react';
 import images from '~/assets/images';
-import style from './Poster.module.scss';
+import './Poster.scss';
 
 function Poster() {
     const title = useRef();
@@ -18,24 +17,16 @@ function Poster() {
     };
 
     return (
-        <div className={style.wrapper} onMouseMove={handleMouseMove}>
-            <img className={style.background} alt="" src={images.poster} />
-            <div className={style.contain}>
-                <h1 ref={title} className={style.title}>
-                    lovetea
-                </h1>
-                <img
-                    ref={leftHand}
-                    className={classNames(style.leftHand, style.handImg)}
-                    src={images.leftHand}
-                    alt=""
-                />
-                <img
-                    ref={rightHand}
-                    className={classNames(style.rightHand, style.handImg)}
-                    src={images.rightHand}
-                    alt=""
-                />
+        <div className="poster">
+            <div className="wrapper" onMouseMove={handleMouseMove}>
+                <img className="background" alt="" src={images.poster} />
+                <div className="contain">
+                    <h1 ref={title} className="title">
+                        lovetea
+                    </h1>
+                    <img ref={leftHand} className="left-hand hand-img" src={images.leftHand} alt="" />
+                    <img ref={rightHand} className="right-hand hand-img" src={images.rightHand} alt="" />
+                </div>
             </div>
         </div>
     );
