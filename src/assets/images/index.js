@@ -4,6 +4,8 @@ const images = {
     leftHand: require('~/assets/images/hand1.png'),
     rightHand: require('~/assets/images/hand2.png'),
     poster: require('~/assets/images/poster.jpg'),
+    gachmen: require('~/assets/images/gachmen.jpg'),
+    gachmenxanh: require('~/assets/images/gachmenxanh.jpg'),
 };
 
 export default images;
