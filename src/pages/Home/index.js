@@ -1,9 +1,37 @@
 import images from '~/assets/images';
 import Introduce from '~/Component/Introduce';
+import ListLayout from '~/Component/ListLayout';
 import SpecialOffer from '~/Component/SpecialOffer';
 import Poster from './Poster';
 
 function Home() {
+    const contentProducts = [
+        {
+            name: 'Black Cookie Latte',
+            img: images.product1,
+        },
+        {
+            name: 'Red Velvet Latte',
+            img: images.product2,
+        },
+        {
+            name: 'Matcha Latte',
+            img: images.product3,
+        },
+    ];
+
+    const contentMerchandise = [
+        {
+            img: images.merchandise1,
+        },
+        {
+            img: images.merchandise2,
+        },
+        {
+            img: images.merchandise3,
+        },
+    ];
+
     return (
         <div>
             <Poster />
@@ -14,12 +42,22 @@ function Home() {
                 reverse
                 to="/story"
             />
+
+            <ListLayout to="/menu" contents={contentProducts} title="Products" btnTextPrimary="all menu" />
             <Introduce
                 introduceName="locations"
                 introduceDescr="Couvee has 5 branches, four are located in Yogyakarta and one is located in Jakarta."
                 buttonName="all locations"
                 imageUrl={images.poster}
                 to="/locations"
+            />
+            <ListLayout
+                toForOutlineBtn="/merchandise"
+                onlyPicture
+                contents={contentMerchandise}
+                title="Merchandise"
+                btnTextPrimary="order now"
+                btnTextOutline="all item"
             />
             <SpecialOffer />
         </div>

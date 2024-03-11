@@ -47,7 +47,7 @@ function Button({
 
     return (
         <Comp className={keys.join(' ')} {...props}>
-            <span className="title">{children}</span>
+            <span className="btn-title">{children}</span>
             {icon && <SwapRightOutlined />}
         </Comp>
     );

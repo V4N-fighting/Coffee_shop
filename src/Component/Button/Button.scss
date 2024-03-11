@@ -10,6 +10,11 @@
     text-transform: uppercase;
     opacity: 1;
     transition: all 0.3s ease;
+    line-height: 1.2;
+
+    & ~ .button {
+        margin-left: 10px;
+    }
 
     &.primary {
         color: var(--dark-primary-text);
@@ -31,10 +36,11 @@
 
     &:hover {
         cursor: pointer;
-        filter: drop-shadow(2px 2px 2px rgb(59, 59, 59));
+        // filter: drop-shadow(2px 2px 2px rgb(59, 59, 59));
+        transform: translateY(-5px);
     }
 
-    .title {
+    & .btn-title {
         margin-right: 10px;
     }
 }
