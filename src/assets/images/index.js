@@ -6,6 +6,7 @@ const images = {
     poster: require('~/assets/images/poster.jpg'),
     gachmen: require('~/assets/images/gachmen.jpg'),
     gachmenxanh: require('~/assets/images/gachmenxanh.jpg'),
+    story: require('~/assets/images/story.jpg'),
 };
 
 export default images;

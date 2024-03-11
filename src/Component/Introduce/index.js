@@ -2,7 +2,7 @@ import images from '~/assets/images';
 import Button from '~/Component/Button';
 import './Introduce.scss';
 
-function Introduce({ introduceName, introduceDescr, buttonName, imageUrl, reverse }) {
+function Introduce({ introduceName, introduceDescr, buttonName, imageUrl, reverse, to }) {
     return (
         <div className="introduce">
             <div className="wrapper">
@@ -10,7 +10,7 @@ function Introduce({ introduceName, introduceDescr, buttonName, imageUrl, revers
                     <div className="content">
                         <h3 className="introduce-name">{introduceName}</h3>
                         <p className="introduce-descr">{introduceDescr}</p>
-                        <Button primary icon>
+                        <Button primary icon to={to}>
                             {buttonName}
                         </Button>
                     </div>
