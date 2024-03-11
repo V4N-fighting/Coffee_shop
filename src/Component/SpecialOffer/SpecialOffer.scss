@@ -1,0 +1,19 @@
+.special-offer {
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 70px 0;
+        height: 100%;
+
+        .contain {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.card-offer {
+    --padding-1: 15px;
+    --padding-2: 10px;
+
+    padding: var(--padding-1);
+    width: 50%;
+
+    .contain {
+        background-color: var(--light-background-color);
+        padding: var(--padding-2);
+
+        .image {
+            width: 35%;
+            padding-bottom: 35%;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+
+            .label {
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                background-size: contain;
+                padding: 30px 60px 40px;
+                line-height: 1;
+                background-position: center;
+                transform: rotate(-26deg);
+                transform-origin: center;
+                text-align: center;
+                font-weight: 600;
+                filter: drop-shadow(0 0 0 rgb(53, 52, 52));
+            }
+        }
+
+        .content {
+            --content-height: calc(((1024px / 2 - (var(--padding-1) + var(--padding-2)) * 2) * 35) / 100);
+            height: var(--content-height);
+
+            padding-left: 20px;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-size: 18px;
+                margin: 10px 0;
+                line-height: 1;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                height: 18px;
+                overflow: hidden;
+                font-family: 'Nunito Sans', sans-serif;
+                color: var(--light-primary-text);
+            }
+
+            .descr {
+                font-size: 14px;
+                line-height: 24px;
+                height: 48px;
+                overflow: hidden;
+                margin: 0 0 auto;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                color: var(--light-secondary-text);
+            }
+
+            .details {
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 1;
+                color: var(--light-secondary-text);
+
+                .time {
+                }
+
+                .more-detail {
+                    &:hover {
+                        color: var(--light-primary-text);
+                        cursor: pointer;
+                    }
+
+                    .detail-text {
+                        text-transform: capitalize;
+                        margin-right: 8px;
+                    }
+
+                    .detail-icon {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .label {
+        }
+    }
+}

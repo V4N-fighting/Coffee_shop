@@ -1,5 +1,6 @@
 import images from '~/assets/images';
 import Introduce from '~/Component/Introduce';
+import SpecialOffer from '~/Component/SpecialOffer';
 import Poster from './Poster';
 
 function Home() {
@@ -18,8 +19,9 @@ function Home() {
                 introduceDescr="Couvee has 5 branches, four are located in Yogyakarta and one is located in Jakarta."
                 buttonName="all locations"
                 imageUrl={images.poster}
-                to="/location"
+                to="/locations"
             />
+            <SpecialOffer />
         </div>
     );
 }
