@@ -18,6 +18,18 @@ function Home() {
             name: 'Matcha Latte',
             img: images.product3,
         },
+        {
+            name: 'Black Cookie Latte',
+            img: images.product1,
+        },
+        {
+            name: 'Red Velvet Latte',
+            img: images.product2,
+        },
+        {
+            name: 'Matcha Latte',
+            img: images.product3,
+        },
     ];
 
     const contentMerchandise = [
@@ -43,7 +55,7 @@ function Home() {
                 to="/story"
             />
 
-            <ListLayout to="/menu" contents={contentProducts} title="Products" btnTextPrimary="all menu" />
+            <ListLayout slide to="/menu" contents={contentProducts} title="Products" btnTextPrimary="all menu" />
             <Introduce
                 introduceName="locations"
                 introduceDescr="Couvee has 5 branches, four are located in Yogyakarta and one is located in Jakarta."

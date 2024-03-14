@@ -1,0 +1,18 @@
+.slider-menu {
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .splide__pagination__page {
+        background: rgb(167, 165, 165);
+    }
+
+    .splide__pagination__page.is-active {
+        background: rgb(102, 102, 102);
+        transform: scale(1.4);
+        z-index: 1;
+    }
+}
