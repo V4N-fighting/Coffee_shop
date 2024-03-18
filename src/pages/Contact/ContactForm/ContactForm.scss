@@ -1,0 +1,85 @@
+.contact-form {
+    padding: 70px 0;
+    height: 100vh;
+
+    .wrapper {
+        max-width: 1024px;
+        margin: auto;
+        height: 100%;
+        .contain {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .contact-img {
+                width: 50%;
+                height: 100%;
+                margin-right: 20px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .contact-content {
+                width: 50%;
+                padding-left: 20px;
+                .title {
+                    font-family: 'M PLUS Rounded 1c', sans-serif;
+                    font-size: 36px;
+                    letter-spacing: 0.1em;
+                    color: var(--light-primary-text);
+                    line-height: 1.2;
+                }
+
+                .descr {
+                    font-size: 16px;
+                    color: var(--light-secondary-text);
+                    margin: 20px 0;
+                }
+
+                .contact-inputs {
+                    margin-bottom: 20px;
+                    .contact-inputs-info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        .contact-inputs-item {
+                            width: calc(50% - 5px);
+                        }
+                    }
+
+                    .contact-inputs-message {
+                        label {
+                        }
+
+                        .message {
+                            padding: 14px 16px;
+                            font-size: 14px;
+                            width: 100%;
+                        }
+                    }
+
+                    label {
+                        font-size: 16px;
+                        margin-bottom: 8px;
+                        color: var(--light-secondary-text);
+                        display: block;
+                    }
+                    input {
+                        background-color: #f9f9f9;
+                        border-radius: 0;
+                        border: 1px solid #d1d1d1;
+                        padding: 14px 16px;
+                        font-size: 14px;
+                        width: 100%;
+                    }
+                }
+
+                .button-box {
+                    width: 100%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

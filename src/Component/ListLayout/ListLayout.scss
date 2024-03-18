@@ -1,5 +1,5 @@
 .list-layout {
-    height: 100vh;
+    // height: 100vh;
     padding: 70px 0;
 
     .wrapper {
@@ -19,11 +19,12 @@
         .content {
             display: flex;
             align-items: center;
-            margin: 0 -20px 60px;
+            flex-wrap: wrap;
+            // margin: 0 -20px 60px;
 
             .item {
-                width: calc((1024px + 80px) / 3);
-                padding: 0 20px;
+                width: calc((1024px) / 3);
+                padding: 0 20px 30px;
 
                 &.wavy-0 {
                     transform: translateY(60px);

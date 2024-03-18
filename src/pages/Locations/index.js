@@ -1,5 +1,10 @@
+import Poster from '~/Component/Poster';
 function Locations() {
-    return <h1>Locations page</h1>;
+    return (
+        <div>
+            <Poster half posterName="location" />
+        </div>
+    );
 }
 
 export default Locations;

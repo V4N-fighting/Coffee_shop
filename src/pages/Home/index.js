@@ -2,7 +2,8 @@ import images from '~/assets/images';
 import Introduce from '~/Component/Introduce';
 import ListLayout from '~/Component/ListLayout';
 import SpecialOffer from '~/Component/SpecialOffer';
-import Poster from './Poster';
+import Poster from '~/Component/Poster';
+import InstagramInvite from '~/Component/InstagramInvite';
 
 function Home() {
     const contentProducts = [
@@ -46,7 +47,7 @@ function Home() {
 
     return (
         <div>
-            <Poster />
+            <Poster img={images.poster} full posterName="lovetea" />
             <Introduce
                 introduceDescr="Founded in April 2017 by two young man from Yogyakarta, Couvee comes from an idea that everyone can enjoy coffee. It’s all started at a small rented building on Jalan Kaliurang. By 2019, Couvee has 5 branches, one of them located in Jakarta."
                 buttonName="full story"
@@ -72,6 +73,7 @@ function Home() {
                 btnTextOutline="all item"
             />
             <SpecialOffer />
+            <InstagramInvite />
         </div>
     );
 }

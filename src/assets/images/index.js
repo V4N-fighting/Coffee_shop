@@ -9,6 +9,7 @@ const images = {
     gachnen: require('~/assets/images/gachnen.jpg'),
     gachmenxanh: require('~/assets/images/gachmenxanh.jpg'),
     story: require('~/assets/images/story.jpg'),
+    menuBack: require('~/assets/images/menuBack.jpg'),
     milkTea1: require('~/assets/images/milktea1.jpg'),
     milkTea2: require('~/assets/images/milktea2.jpg'),
     product1: require('~/assets/images/product1.jpg'),
@@ -17,6 +18,13 @@ const images = {
     merchandise1: require('~/assets/images/merchandise1.jpg'),
     merchandise2: require('~/assets/images/merchandise2.jpg'),
     merchandise3: require('~/assets/images/merchandise3.jpg'),
+    storyImg: require('~/assets/images/storyImg.jpg'),
+    oldStory: require('~/assets/images/oldStory.jpg'),
+    contact: require('~/assets/images/contact.jpg'),
+    contactBack: require('~/assets/images/contactBack.jpg'),
+    ourBackgroundStory: require('~/assets/images/ourBackgroundStory.jpeg'),
+    merchandiseBack: require('~/assets/images/merchandiseBack.jpg'),
+    merchandiseContent: require('~/assets/images/merchandiseContent.jpg'),
 };
 
 export default images;

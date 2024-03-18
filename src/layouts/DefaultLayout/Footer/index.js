@@ -10,14 +10,6 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="wrapper">
-                <div className="top">
-                    <div className="wrapper-top">
-                        <div className="logo">
-                            <img className="img" src={images.logo} alt="" />
-                        </div>
-                        <h1 className="slogan">FIND US ON INSTAGRAM !</h1>
-                    </div>
-                </div>
                 <div className="contain">
                     <div className="content">
                         <div className="content-item">

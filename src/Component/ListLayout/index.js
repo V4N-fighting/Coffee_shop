@@ -2,7 +2,17 @@ import Button from '~/Component/Button';
 import SliderMenu from '../SliderMenu';
 import './ListLayout.scss';
 
-function ListLayout({ title, contents, btnTextPrimary, btnTextOutline, onlyPicture, to, toForOutlineBtn, slide }) {
+function ListLayout({
+    title,
+    contents,
+    btnTextPrimary,
+    btnTextOutline,
+    onlyPicture,
+    to,
+    toForOutlineBtn,
+    slide,
+    hasBtn = true,
+}) {
     return (
         <div className="list-layout">
             <div className="wrapper">
@@ -51,22 +61,23 @@ function ListLayout({ title, contents, btnTextPrimary, btnTextOutline, onlyPictu
                     </div>
                 )}
 
-                {onlyPicture ? (
-                    <div className="btn-box">
-                        <Button primary to={to}>
-                            {btnTextPrimary}
-                        </Button>
-                        <Button outline to={toForOutlineBtn}>
-                            {btnTextOutline}
-                        </Button>
-                    </div>
-                ) : (
-                    <div className="btn-box">
-                        <Button primary to={to}>
-                            {btnTextPrimary}
-                        </Button>
-                    </div>
-                )}
+                {hasBtn &&
+                    (onlyPicture ? (
+                        <div className="btn-box">
+                            <Button primary to={to}>
+                                {btnTextPrimary}
+                            </Button>
+                            <Button outline to={toForOutlineBtn}>
+                                {btnTextOutline}
+                            </Button>
+                        </div>
+                    ) : (
+                        <div className="btn-box">
+                            <Button primary to={to}>
+                                {btnTextPrimary}
+                            </Button>
+                        </div>
+                    ))}
             </div>
         </div>
     );
