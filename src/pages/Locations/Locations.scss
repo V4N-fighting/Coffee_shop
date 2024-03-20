@@ -1,0 +1,38 @@
+.locations {
+    .wrapper-content {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+    }
+
+    .content {
+        max-width: 1024px;
+        margin: auto;
+        text-align: center;
+        .title {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 36px;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+            color: var(--light-primary-text);
+            text-transform: uppercase;
+            margin: 40px 0;
+        }
+
+        .list-type {
+            .type {
+                padding: 20px 0;
+                margin: 0 25px;
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-size: 24px;
+                letter-spacing: 0;
+                cursor: pointer;
+                color: var(--light-secondary-text);
+                text-transform: capitalize;
+                display: inline-block;
+            }
+        }
+    }
+}
