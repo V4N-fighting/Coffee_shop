@@ -52,6 +52,7 @@
         background-size: cover;
         background-position: center;
         position: relative;
+        display: block;
 
         &:hover {
             .show-descr {
@@ -92,7 +93,7 @@
             letter-spacing: 0;
             font-weight: 400;
             line-height: 1.2;
-            margin-bottom: 8px;
+            margin-top: 10px;
             color: var(--light-primary-text);
         }
     }

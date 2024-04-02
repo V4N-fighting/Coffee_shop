@@ -1,0 +1,77 @@
+.product-item-layout {
+    padding: 70px 0;
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        .contain {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 400px;
+            .products-image {
+                width: 400px;
+
+                .main-img {
+                    width: 100%;
+                    // height: 500px;
+                    padding-bottom: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-color: rgb(66, 64, 64);
+                }
+
+                .list-products {
+                    width: 100%;
+                }
+            }
+
+            .product-content {
+                width: calc(1024px - 400px - 30px);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .product-name {
+                    font-size: 30px;
+                    color: var(--light-primary-text);
+                    line-height: 1;
+                }
+                .product-descr {
+                    font-size: 20px;
+                    color: var(--light-secondary-text);
+                }
+                .discount {
+                    color: darkorange;
+                    font-size: 16px;
+
+                    .promo {
+                        display: inline-block;
+                        padding: 5px 10px;
+                        border: 3px solid darkred;
+                    }
+                }
+                .box-price {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+
+                    .present-price {
+                        font-size: 24px;
+                        color: darkred;
+                    }
+
+                    .pass-price {
+                        font-size: 14px;
+                        color: rgb(83, 3, 3);
+                        text-decoration: line-through;
+                    }
+                }
+                .box-btn {
+                    // align-self: flex-end;
+                }
+            }
+        }
+    }
+}

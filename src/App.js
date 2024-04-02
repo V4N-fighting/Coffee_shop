@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoute } from '~/routes';
+import { publicRoute, privateRoute } from '~/routes';
 import { DefaultLayout } from '~/layouts';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
         <Router>
             <div className="App">
                 <Routes>
-                    {publicRoute.map((route, index) => {
+                    {publicRoute.concat(privateRoute).map((route, index) => {
                         const Page = route.component;
                         return (
                             <Route

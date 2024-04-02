@@ -1,5 +1,6 @@
 import Footer from './Footer';
 import Header from './Header';
+import User from './User';
 import style from './DefaultLayout.module.scss';
 
 function DefaultLayout({ children }) {
@@ -9,6 +10,7 @@ function DefaultLayout({ children }) {
                 <Header />
                 <div className={style.content}>{children}</div>
                 <Footer />
+                <User />
             </div>
         </div>
     );

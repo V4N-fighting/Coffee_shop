@@ -4,6 +4,7 @@ import Menu from '~/pages/Menu';
 import Locations from '~/pages/Locations';
 import Merchandise from '~/pages/Merchandise';
 import Contact from '~/pages/Contact';
+import ProductItemLayout from '~/Component/ProductItemLayout';
 
 const publicRoute = [
     { path: '/', component: Home, name: 'HomePage' },
@@ -14,6 +15,6 @@ const publicRoute = [
     { path: '/contact', component: Contact, name: 'Contact' },
 ];
 
-const privateRoute = [];
+const privateRoute = [{ path: '/menuitem', component: ProductItemLayout, name: 'ProductItemLayout' }];
 
 export { publicRoute, privateRoute };

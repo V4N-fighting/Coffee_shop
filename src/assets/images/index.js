@@ -1,5 +1,6 @@
 const images = {
     logo: require('~/assets/images/logo.svg').default,
+    avt: require('~/assets/images/avt.jpg'),
     logoWhite: require('~/assets/images/logoWhite.svg').default,
     leftHand: require('~/assets/images/hand1.png'),
     rightHand: require('~/assets/images/hand2.png'),
@@ -31,6 +32,7 @@ const images = {
     ourBackgroundStory: require('~/assets/images/ourBackgroundStory.jpeg'),
     merchandiseBack: require('~/assets/images/merchandiseBack.jpg'),
     merchandiseContent: require('~/assets/images/merchandiseContent.jpg'),
+    orderMenu: require('~/assets/images/orderMenu.jpg'),
 };
 
 export default images;

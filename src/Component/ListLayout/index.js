@@ -1,6 +1,16 @@
+import { Link } from 'react-router-dom';
 import Button from '~/Component/Button';
 import SliderMenu from '../SliderMenu';
 import './ListLayout.scss';
+
+export let contentsForMenuItem = {
+    url: '',
+    name: '',
+    descr: '',
+    discount: '',
+    presentPrice: '',
+    passPrice: '',
+};
 
 function ListLayout({
     title,
@@ -13,6 +23,16 @@ function ListLayout({
     slide,
     hasBtn = true,
 }) {
+    const handleClick = (content) => {
+        contentsForMenuItem.url = content.img;
+        contentsForMenuItem.name = content.name;
+        contentsForMenuItem.descr = 'Happy happy happy';
+        contentsForMenuItem.discount = 'Giảm 20%';
+        contentsForMenuItem.presentPrice = '100.000';
+        contentsForMenuItem.passPrice = '125.000';
+
+        console.log(contentsForMenuItem);
+    };
     return (
         <div className="list-layout">
             <div className="wrapper">
@@ -22,13 +42,20 @@ function ListLayout({
                         {(content) => {
                             return (
                                 <div className="item" style={{ margin: '10px' }}>
-                                    <div className="image" style={{ backgroundImage: `url(${content.img})` }}>
+                                    <Link
+                                        to="/menuitem"
+                                        className="image"
+                                        style={{ backgroundImage: `url(${content.img})` }}
+                                        onClick={(e) => {
+                                            handleClick(content);
+                                        }}
+                                    >
                                         {onlyPicture ? undefined : (
                                             <div className="show-descr">
                                                 <h4 className="descr">+ see description</h4>
                                             </div>
                                         )}
-                                    </div>
+                                    </Link>
                                     {onlyPicture ? undefined : (
                                         <div className="item-name">
                                             <h4 className="name">{content.name}</h4>
@@ -43,13 +70,20 @@ function ListLayout({
                         {contents.map((content, index) => {
                             return (
                                 <div key={index} className={onlyPicture ? `item wavy-${index}` : 'item'}>
-                                    <div className="image" style={{ backgroundImage: `url(${content.img})` }}>
+                                    <Link
+                                        to="/menuitem"
+                                        className="image"
+                                        style={{ backgroundImage: `url(${content.img})` }}
+                                        onClick={(e) => {
+                                            handleClick(content);
+                                        }}
+                                    >
                                         {onlyPicture ? undefined : (
                                             <div className="show-descr">
                                                 <h4 className="descr">+ see description</h4>
                                             </div>
                                         )}
-                                    </div>
+                                    </Link>
                                     {onlyPicture ? undefined : (
                                         <div className="item-name">
                                             <h4 className="name">{content.name}</h4>
