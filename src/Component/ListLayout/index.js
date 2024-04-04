@@ -36,7 +36,7 @@ function ListLayout({
     return (
         <div className="list-layout">
             <div className="wrapper">
-                <h1 className="title">{title}</h1>
+                {title ? <h1 className="title">{title}</h1> : undefined}
                 {slide ? (
                     <SliderMenu contents={contents} marginBottom="10px">
                         {(content) => {

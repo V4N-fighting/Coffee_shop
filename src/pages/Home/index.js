@@ -5,7 +5,13 @@ import SpecialOffer from '~/Component/SpecialOffer';
 import Poster from '~/Component/Poster';
 import InstagramInvite from '~/Component/InstagramInvite';
 
+import ApiUser from '~/api/ApiUser';
+
 function Home() {
+    const { data } = ApiUser();
+
+    console.log(data);
+
     const contentProducts = [
         {
             name: 'Black Cookie Latte',

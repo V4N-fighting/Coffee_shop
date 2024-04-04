@@ -1,47 +1,30 @@
 import './SignIn.scss';
-import { USER } from '~/Component/FakeUser';
 import Button from '../Button';
 import { useState, useRef, useEffect } from 'react';
-
-export let avatar = {};
+import ApiUser from '~/api/ApiUser';
 
 function SignIn() {
+    const { data } = ApiUser();
+    const box = useRef();
+
+    console.log(box);
+
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
-    const [avt, setAvt] = useState();
-
-    const box = useRef();
-
     const handleClick = () => {
-        console.log(password, USER.password);
-        if (userName === USER.email && password === USER.pass) {
-            localStorage.setItem('email', userName);
-            localStorage.setItem('pass', password);
-            window.location.reload();
-        } else {
-            alert('sai rồi');
-        }
+        const user = data.find((dataItem) => {
+            return dataItem.email === userName && password === dataItem.first_name;
+        });
+
+        localStorage.setItem('user_avatar', user.avatar);
+        window.location.reload();
     };
 
     const handleClose = () => {
-        console.log((box.current.style = 'display: none'));
+        box.current.style = 'display: none';
     };
 
-    useEffect(() => {
-        return () => {
-            avt && URL.revokeObjectURL(avt.link);
-        };
-    }, [avt]);
-
-    const handlePreviewAvt = (e) => {
-        const file = e.target.files[0];
-        file.link = URL.createObjectURL(file);
-        setAvt(file);
-
-        // có thể mở lại ảnh giống nhau
-        e.target.value = null;
-    };
     return (
         <div ref={box} className="sign-in">
             <div className="contain">
@@ -50,7 +33,7 @@ function SignIn() {
                 </button>
                 <h3 className="title">Sign In</h3>
                 <div className="contain-item">
-                    <span className="contain-item-name">Tên đăng nhập</span>
+                    <span className="contain-item-name">Username or Email</span>
                     <input
                         className="input"
                         placeholder="Name..."
@@ -60,7 +43,7 @@ function SignIn() {
                     />
                 </div>
                 <div className="contain-item">
-                    <span className="contain-item-name">Mật khẩu</span>
+                    <span className="contain-item-name">Password</span>
                     <input
                         className="input"
                         placeholder="Pass..."
@@ -68,10 +51,6 @@ function SignIn() {
                             setPassword(e.currentTarget.value);
                         }}
                     />
-                </div>
-                <div className="contain-item">
-                    <span className="contain-item-name">Chọn ảnh</span>
-                    <input className="input" type="file" onChange={handlePreviewAvt} />
                 </div>
                 <Button primary style={{ width: '100%', marginTop: '30px' }} onClick={handleClick}>
                     Sign In

@@ -1,9 +1,9 @@
 import './User.scss';
 import { ShoppingCartOutlined } from '@ant-design/icons';
-import { avatar } from '~/Component/SignIn';
 
 function User() {
-    console.log(avatar);
+    const avatar = localStorage.getItem('user_avatar');
+
     return (
         <div className="user">
             <div className="contain">
